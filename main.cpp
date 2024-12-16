@@ -32,7 +32,7 @@ void bfs(int start)
     while (front <= rear)
     {
         int current = queue[front++]; // Dequeue a node
-        printf("%d ", current);   // Print the current node (1-based index)
+        printf("%d ", current);   // Print the current node
 
         // Enqueue all adjacent, unvisited nodes
         for (i = 0; i < N; i++)
