@@ -32,12 +32,12 @@ void bfs(int start)
     while (front <= rear)
     {
         int current = queue[front++]; // Dequeue a node
-        printf("%d ", current + 1);   // Print the current node (1-based index)
+        printf("%d ", current);   // Print the current node (1-based index)
 
         // Enqueue all adjacent, unvisited nodes
         for (i = 0; i < N; i++)
         {
-            if (a[current][i] == 1 && !visited[i])
+            if (a[current][i] == 1 && visited[i]==0)
             {
                 queue[++rear] = i; // Enqueue the node
                 visited[i] = 1;    // Mark as visited
@@ -54,3 +54,4 @@ int main()
     bfs(start); // Call BFS
     return 0;
 }
+
